@@ -421,6 +421,7 @@ section { padding: 76px 0; }
   color: var(--muted);
   text-align: center;
 }
+.install-photo figcaption a { color: var(--maroon); font-weight: 600; }
 .pillar {
   background: var(--paper);
   border: 1px solid var(--line);
