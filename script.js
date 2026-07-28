@@ -83,7 +83,7 @@
   var motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
     !document.documentElement.classList.contains('flat');
   if (motionOK && 'IntersectionObserver' in window) {
-    var targets = document.querySelectorAll('.pillar, .sample-sheet, .route-table, .consult-photo, .pc-photo, .calc-card');
+    var targets = document.querySelectorAll('.pillar, .sample-sheet, .route-table, .consult-photo, .pc-photo, .calc-card, .install-photo');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) {
