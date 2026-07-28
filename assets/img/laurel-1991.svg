@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 192" width="300" height="192">
+  <defs>
+    <g id="branch">
+      <path d="M 96 170 C 58 148, 38 108, 46 54" fill="none" stroke="#FF9900" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="0" cy="0" rx="15" ry="5.5" fill="#FF9900" transform="translate(88 158) rotate(-30)"/>
+      <ellipse cx="0" cy="0" rx="15" ry="5.5" fill="#FF9900" transform="translate(72 142) rotate(-45)"/>
+      <ellipse cx="0" cy="0" rx="15" ry="5.5" fill="#FF9900" transform="translate(58 122) rotate(-60)"/>
+      <ellipse cx="0" cy="0" rx="15" ry="5.5" fill="#FF9900" transform="translate(50 100) rotate(-75)"/>
+      <ellipse cx="0" cy="0" rx="15" ry="5.5" fill="#FF9900" transform="translate(46 78) rotate(-85)"/>
+      <ellipse cx="0" cy="0" rx="14" ry="5" fill="#FF9900" transform="translate(48 56) rotate(-100)"/>
+    </g>
+  </defs>
+  <use href="#branch"/>
+  <use href="#branch" transform="translate(300 0) scale(-1 1)"/>
+  <text x="150" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" letter-spacing="2.5" fill="#302310">SERVING THE GULF SOUTH</text>
+  <text x="150" y="120" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="#302310">SINCE 1991</text>
+</svg>

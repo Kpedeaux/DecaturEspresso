@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wholesale Catalog | Decatur Espresso (Demo)</title>
+<meta name="description" content="Demo wholesale catalog for Decatur Espresso: 266 products with weekly delivery across Southern Louisiana and Mississippi. Demonstration only.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+<div class="demo-ribbon" role="note"><span><strong>Demo site</strong> · No real orders, no payments.<span class="ribbon-detail"> Browsing and checkout are simulations.</span></span></div>
+
+<header class="shop-header">
+  <a class="brand" href="index.html" aria-label="Decatur Espresso home">
+    <img src="assets/logo/decatur-logo.png" alt="Decatur Espresso" width="173" height="133">
+  </a>
+  <div class="searchwrap">
+    <input id="search" type="search" placeholder="Search 266 products" aria-label="Search products">
+  </div>
+  <button id="cart-open" class="cart-btn" type="button" aria-haspopup="dialog">
+    Order sheet <span id="cart-count" class="cart-count" aria-live="polite">0</span>
+  </button>
+</header>
+
+<div id="route-strip" class="route-strip" hidden>
+  <span id="route-strip-text"></span>
+  <span class="route-strip-right">
+    <button id="load-last" class="route-strip-btn" type="button" hidden>Load your last order</button>
+    <a href="tel:+15047339881">Order help? 504-733-9881</a>
+  </span>
+</div>
+
+<div class="shop-layout">
+  <nav id="groups" class="groups" aria-label="Product groups"></nav>
+  <main id="catalog" class="catalog"></main>
+</div>
+
+<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Demo order sheet" hidden>
+  <header>
+    <h2>Demo order sheet</h2>
+    <button id="cart-close" class="icon-btn" type="button">Close</button>
+  </header>
+  <div id="cart-lines" class="cart-lines"></div>
+  <div id="cart-meter" class="cart-meter"></div>
+  <footer>
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+    <button id="cart-review" class="btn btn-gold" type="button">Review demo order</button>
+    <button id="cart-clear" class="cart-clear" type="button">Clear the sheet</button>
+  </footer>
+</aside>
+
+<div class="checkout" id="checkout" hidden>
+  <div class="checkout-panel" id="checkout-body" role="dialog" aria-modal="true" aria-label="Demo checkout"></div>
+</div>
+
+<script src="products.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>
