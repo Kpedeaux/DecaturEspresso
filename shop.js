@@ -478,9 +478,32 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Escape') return;
-    if (!el.checkout.hidden) closeCheckout();
-    else if (!el.drawer.hidden) closeDrawer();
+    if (e.key === 'Escape') {
+      if (!el.checkout.hidden) closeCheckout();
+      else if (!el.drawer.hidden) closeDrawer();
+      return;
+    }
+    // Keep Tab inside whichever dialog is open (aria-modal promises it)
+    if (e.key === 'Tab') {
+      var dialog = !el.checkout.hidden ? el.checkout : (!el.drawer.hidden ? el.drawer : null);
+      if (!dialog) return;
+      var items = dialog.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled])'
+      );
+      if (!items.length) return;
+      var first = items[0];
+      var last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      } else if (!dialog.contains(document.activeElement)) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 
   // ---- init ----

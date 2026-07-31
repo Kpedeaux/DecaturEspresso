@@ -55,8 +55,28 @@ h1, h2, h3 {
 }
 
 :focus-visible {
-  outline: 3px solid var(--gold);
+  /* Maroon ring with a light halo: gold was ~1.9:1 on the cream page */
+  outline: 3px solid var(--maroon);
   outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.85);
+}
+
+/* Skip link: hidden until keyboard focus */
+.skip-nav {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  z-index: 999;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: top 150ms ease;
+}
+
+.skip-nav:focus {
+  top: 12px;
 }
 
 /* Demo ribbon: always visible, both pages */
